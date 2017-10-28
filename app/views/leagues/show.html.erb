@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @league.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @league.description %>
+</p>
+
+<p>
+  <strong>Team(s):</strong>
+  <ul>
+    <% @league.teams.each do |team| %>
+      <li><%= team.name %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Fixtures:</strong>
+  <ul>
+    <% @league.fixtures.each do |fixture| %>
+      <li><%= fixture.team_id %> vs. <%= fixture.opponent %>, <%= fixture.date.strftime("%m/%d/%Y") %> @ <%= fixture.time.strftime("%l:%M %p") %></li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_league_path(@league) %> |
+<%= link_to 'Back to League Index', leagues_path %>

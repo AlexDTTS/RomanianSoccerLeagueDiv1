@@ -1,0 +1,42 @@
+<%= form_with(model: fixture, local: true) do |form| %>
+  <% if fixture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fixture.errors.count, "error") %> prohibited this fixture from being saved:</h2>
+
+      <ul>
+      <% fixture.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :team_id, "Home Team" %>
+    <%= form.collection_select :team_id, Team.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opponent, "Away Team" %>
+    <%= form.collection_select :opponent, Team.all, :name, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_field :date, id: :fixture_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.time_field :time, id: :fixture_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :league_id, "League" %>
+    <%= form.collection_select :league_id, League.all, :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
