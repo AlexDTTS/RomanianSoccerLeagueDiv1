@@ -2,7 +2,9 @@
 
 <p>
   <strong>Name:</strong>
+  <ol>
   <%= @league.name %>
+  </ol>
 </p>
 
 <p>
@@ -12,21 +14,21 @@
 
 <p>
   <strong>Team(s):</strong>
-  <ul>
-    <% @league.teams.each do |team| %>
+  <ol>
+    <h4><% @league.teams.each do |team| %>
       <li><%= team.name %></li>
-    <% end %>
-  </ul>
+    <% end %></h4>
+  </ol>
 </p>
 
 <p>
   <strong>Fixtures:</strong>
   <ul>
     <% @league.fixtures.each do |fixture| %>
-      <li><%= fixture.team_id %> vs. <%= fixture.opponent %>, <%= fixture.date.strftime("%m/%d/%Y") %> @ <%= fixture.time.strftime("%l:%M %p") %></li>
+      <li><%= fixture.team.name %> vs. <%= fixture.opponent %>, <%= fixture.date.strftime("%m/%d/%Y") %> @ <%= fixture.time.strftime("%l:%M %p") %></li>
     <% end %>
   </ul>
 </p>
 
-<%= link_to 'Edit', edit_league_path(@league) %> |
-<%= link_to 'Back to League Index', leagues_path %>
+<%= link_to 'Edit', edit_league_path(@league), class: "btn btn-default" %> |
+<%= link_to 'Back to League Index', leagues_path, class: "btn btn-default" %>

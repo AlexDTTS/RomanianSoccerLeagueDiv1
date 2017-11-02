@@ -2,7 +2,7 @@
 
 <h1>Teams</h1>
 
-<table>
+<table class="container">
   <thead>
     <tr>
       <th>Name</th>
@@ -12,16 +12,23 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="container">
     <% @teams.each do |team| %>
       <tr>
-        <td><%= team.name %></td>
+        
+        <td>
+            <ol>
+            <%= team.name %>
+              
+            </ol>
+        </td>
         <td><%= team.mascot %></td>
         <td><%= team.colors %></td>
-        <td><%= link_to 'Show', team %></td>
+        <td><%= link_to 'Show', team, class: "btn btn-default" %></td>
+        
         <% if team.user_id == current_user.id %>
-          <td><%= link_to 'Edit', edit_team_path(team) %></td>
-          <td><%= link_to 'Delete', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_team_path(team), class: "btn btn-default" %></td>
+          <td><%= link_to 'Delete', team, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
         <% end %>
       </tr>
     <% end %>
@@ -30,4 +37,4 @@
 
 <br>
 
-<%= link_to 'New Team', new_team_path %>
+<%= link_to 'New Team', new_team_path, class: "btn btn-default" %>

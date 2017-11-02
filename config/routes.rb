@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
   resources :teams do
-    resources :players
+   resources :players
   end
 
   resources :leagues

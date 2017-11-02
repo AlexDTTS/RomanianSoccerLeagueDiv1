@@ -1,7 +1,7 @@
 # README
 
 ## Application Description
-The FootyLeague Application is a content management system built with Rails which utilizes ActiveRecord to maintain the database of a mock recreational soccer league. Devise and OmniAuth allow the users of this application to create user profiles or login through Facebook. Upon profile creation users can create new teams and add players to the teams. They can then choose to add their teams to existing leagues or create new leagues and populate them with other teams. Within these leagues the user can then create fixtures or games with specific dates and times.
+The RomanianSoccerLeagueDiv1 Application is a content management system built with Rails which utilizes ActiveRecord to maintain the database of a mock recreational soccer league. Devise and OmniAuth allow the users of this application to create user profiles or login through Facebook. Upon profile creation users can create new teams and add players to the teams. They can then choose to add their teams to existing leagues or create new leagues and populate them with other teams. Within these leagues the user can then create fixtures or games with specific dates and times.
 
 ## Installation Guide
 All files for this application are available on this GitHub repository and it is open for contributions. Simply fork this repository to your profile and clone it to your local system.

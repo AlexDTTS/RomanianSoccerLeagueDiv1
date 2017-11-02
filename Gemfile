@@ -6,6 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'jquery-easing-rails'
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record

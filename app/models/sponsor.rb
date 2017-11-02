@@ -1,3 +1,3 @@
 class Sponsor < ApplicationRecord
-  belongs_to :team
+  has_many :teams
 end

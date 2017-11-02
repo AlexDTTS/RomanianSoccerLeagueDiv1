@@ -1,20 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Soccer League</title>
+    <title></title>
     <%= csrf_meta_tags %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widht, initial-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" %>
   </head>
 
-  <body>
-    <% if user_signed_in? %>
+  <body class="container">
+    <%= render 'layouts/navbar' %>
+<!--     <% if user_signed_in? %>
       <%= link_to("Sign Out", destroy_user_session_path, :method => "delete") %>
-      <%= link_to 'Team Index', teams_path %>
-      <%= link_to 'League Index', leagues_path %>
-      <%= link_to 'Fixtures Index', fixtures_path %>
+      <%= link_to 'Team Index', teams_path, class: "btn btn-danger" %>
+      <%= link_to 'League Index', leagues_path, class: "btn btn-danger" %>
+      <%= link_to 'Fixtures Index', fixtures_path, class: "btn btn-danger" %>
     <% end %>
+
+
+ -->    
+
+
+  <%= render 'layouts/header' %>
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Romanian Soccer League</h2>
+                <p>The Liga I is the highest level in the Romanian football league system and is operated by the <a href="https://en.wikipedia.org/wiki/Liga_Profesionist%C4%83_de_Fotbal">Romanian Professional Soccer League</a>. 14 professional teams compete for the title of Romanian Football Champion in a round-robin home and away, with 26 season matches in the regular season.</p>
+                <p>After the regular season will end, the top 6 teams will challenge the League Champion title, as well as the remaining European Cup spots, while the last 8 teams will battle to avoid the three relegation spots. </p>
+                <p>Two directly and the 12th placed team will play a play-off against the 2nd place Play-Off winner from the Liga II. The teams that will advance to the Play-Off or Play-Out will take half of the points won, in the regular season. The halved points will be rounded in addition (e.g. if Astra will finish the regular season with 61 points it will start the Play-Off with 31 points).</p>
+            </div>
+        </div>
+    </section>
     <%= yield %>
+
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2></h2>
+                    <p>
+                       
+    <%= render 'layouts/navbar' %>                   
+     
+
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+<!--     <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Start Bootstrap</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:dobrogeanu.alexandru@yahoo.com">dobrogeanu.alexandru@yahoo.com</a>
+                </p> -->
+<!--                 <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Alex Dobrogeanu.</p>
+        </div>
+    </footer>
+
   </body>
-</html>
+</html>     
+
