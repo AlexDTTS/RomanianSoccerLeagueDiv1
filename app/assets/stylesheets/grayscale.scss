@@ -164,19 +164,19 @@ a {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 100% !important;
     font-size: 40px;
-    color: white;
+    color: black;
     background: transparent;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    -webkit-transition: background .8s ease-in-out;
+    -moz-transition: background .8s ease-in-out;
+    transition: background .8s ease-in-out;
     &:hover,
     &:focus {
         outline: none;
-        color: white;
-        background: rgba(white, 0.1);
+        color: black;
+        background: rgba(black, 0.1);
     }
     i.animated {
         -webkit-transition-property: -webkit-transform;
@@ -240,7 +240,7 @@ a {
     width: 100%;
     padding: 50px 0;
     color: white;
-    background: url(image-path("downloads-bg.jpg")) no-repeat center center scroll;
+    background: url(image-path("2.png")) no-repeat center center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
